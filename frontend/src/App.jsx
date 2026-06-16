@@ -4,6 +4,7 @@ import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import Cart from './pages/Cart';
 import Checkout from './pages/Checkout';
+import Admin from './pages/Admin';
 
 function App() {
   const [cart, setCart] = useState([]);
@@ -35,6 +36,7 @@ function App() {
         <Route path="/" element={<Home addToCart={addToCart} />} />
         <Route path="/cart" element={<Cart cart={cart} removeFromCart={removeFromCart} />} />
         <Route path="/checkout" element={<Checkout cart={cart} clearCart={clearCart} />} />
+        <Route path="/admin" element={<Admin />} />
       </Routes>
     </BrowserRouter>
   );

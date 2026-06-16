@@ -9,18 +9,23 @@ function Navbar({ cartCount }) {
         <Link to="/cart" style={styles.link}>
           🛒 Cart ({cartCount})
         </Link>
+        <Link to="/admin" style={styles.adminLink}>
+          ⚙️ Admin
+        </Link>
       </div>
     </nav>
   );
 }
 
 const styles = {
-  nav: { display: 'flex', justifyContent: 'space-between', 
-        alignItems: 'center', padding: '1rem 2rem', 
+  nav: { display: 'flex', justifyContent: 'space-between',
+        alignItems: 'center', padding: '1rem 2rem',
         background: '#1a1a2e', color: 'white' },
-  logo: { color: '#00d4ff', fontSize: '1.5rem', 
+  logo: { color: '#00d4ff', fontSize: '1.5rem',
           fontWeight: 'bold', textDecoration: 'none' },
-  link: { color: 'white', marginLeft: '1.5rem', textDecoration: 'none' }
+  link: { color: 'white', marginLeft: '1.5rem', textDecoration: 'none' },
+  adminLink: { color: '#00d4ff', marginLeft: '1.5rem', 
+               textDecoration: 'none', fontWeight: 'bold' }
 };
 
 export default Navbar;
